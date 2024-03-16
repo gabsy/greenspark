@@ -3,17 +3,21 @@ import styles from './colorPicker.module.css';
 
 interface ColorPickerProps {
 	color: string;
-	onChange: (color: string) => void;
+	onChangeFunction: (
+		color: 'white' | 'black' | 'blue' | 'green' | 'beige',
+	) => void;
 }
 
-const ColorPicker: FC<ColorPickerProps> = ({ color, onChange }) => {
+const ColorPicker: FC<ColorPickerProps> = ({ color, onChangeFunction }) => {
 	const [selectedColor, setSelectedColor] = useState<string>(color);
 
 	const colors = ['blue', 'green', 'beige', 'white', 'black'];
 
-	const handleColorChange = (newColor: string) => {
+	const handleColorChange = (
+		newColor: 'white' | 'black' | 'blue' | 'green' | 'beige',
+	) => {
 		setSelectedColor(newColor);
-		onChange(newColor);
+		onChangeFunction(newColor);
 	};
 
 	return (
@@ -22,7 +26,16 @@ const ColorPicker: FC<ColorPickerProps> = ({ color, onChange }) => {
 				<button
 					key={index}
 					style={{ backgroundColor: `var(--color-${color})` }}
-					onClick={() => handleColorChange(color)}
+					onClick={() =>
+						handleColorChange(
+							color as
+								| 'white'
+								| 'black'
+								| 'blue'
+								| 'green'
+								| 'beige',
+						)
+					}
 					className={selectedColor === color ? styles.selected : ''}
 				></button>
 			))}

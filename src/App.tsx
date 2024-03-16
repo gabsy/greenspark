@@ -1,5 +1,5 @@
 import PerProductWidgets from '@components/PerProductWidgets/PerProductWidgets';
-import { fetchData } from './api/api';
+import { fetchData } from '@components/PerProductWidgets/api/api';
 
 function App() {
 	return (

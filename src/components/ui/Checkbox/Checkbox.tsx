@@ -3,16 +3,16 @@ import styles from './checkbox.module.css';
 
 interface CheckboxProps {
 	label?: string;
-	onChange: (isChecked: boolean) => void;
+	onChangeFunction: (isChecked: boolean) => void;
 	checked: boolean;
 }
 
-const Checkbox: FC<CheckboxProps> = ({ label, onChange, checked }) => {
+const Checkbox: FC<CheckboxProps> = ({ label, onChangeFunction, checked }) => {
 	const [isChecked, setIsChecked] = useState<boolean>(checked);
 
 	const handleCheckboxChange = () => {
 		setIsChecked(!isChecked);
-		onChange(!isChecked);
+		onChangeFunction(!isChecked);
 	};
 
 	return (

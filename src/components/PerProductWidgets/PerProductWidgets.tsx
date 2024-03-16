@@ -1,8 +1,8 @@
 import { FC, useState, useEffect, Dispatch, SetStateAction } from 'react';
-import ProductWidget from '@components/ProductWidget/ProductWidget';
-import styles from './perProductWidgets.module.css';
+import ProductWidgetSetup from '@components/ProductWidgetSetup/ProductWidgetSetup';
 import ProductWidgetLoader from '@components/ProductWidgetLoader/ProductWidgetLoader';
 import { dataError } from '@components/ui/Svgs/Svgs';
+import styles from './perProductWidgets.module.css';
 
 export interface Widget {
 	id: number;
@@ -73,7 +73,7 @@ const PerProductWidgets: FC<PerProductWidgetsProps> = ({
 					<>
 						{/* Map through the data array and render the ProductWidget component for each item. */}
 						{data.map((widget: Widget, index: number) => (
-							<ProductWidget
+							<ProductWidgetSetup
 								key={index}
 								id={widget.id}
 								type={widget.type}

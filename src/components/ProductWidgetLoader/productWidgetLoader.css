@@ -1,0 +1,103 @@
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+.w-full {
+	width: 100%;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+.p-8 {
+	padding: 2rem;
+}
+
+.rounded-3xl {
+	border-radius: 1.5rem;
+}
+
+.animate-pulse {
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.duration-75 {
+	animation-duration: 0.75s;
+}
+
+.flex {
+	display: flex;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+	margin-left: calc(1rem * var(--tw-space-x-reverse));
+}
+
+.rounded-full {
+	border-radius: 9999px;
+}
+
+.bg-gray-200 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
+.h-12 {
+	height: 3rem;
+}
+
+.w-12 {
+	width: 3rem;
+}
+
+.flex-1 {
+	flex: 1 1 0%;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-y-reverse: 0;
+	margin-bottom: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-top: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.py-1 {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
+.h-4 {
+	height: 1rem;
+}
+
+.w-3/4 {
+	width: 75%;
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-y-reverse: 0;
+	margin-bottom: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-top: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.w-5/6 {
+	width: 83.333333%;
+}
+
+.mt-6 {
+	margin-top: 1.5rem;
+}
+
+.w-1/2 {
+	width: 50%;
+}

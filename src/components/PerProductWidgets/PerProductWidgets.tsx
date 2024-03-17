@@ -2,6 +2,7 @@ import { FC, useState, useEffect, Dispatch, SetStateAction } from 'react';
 import ProductWidgetSetup from '@components/ProductWidgetSetup/ProductWidgetSetup';
 import ProductWidgetLoader from '@components/ProductWidgetLoader/ProductWidgetLoader';
 import { dataError } from '@components/ui/Svgs/Svgs';
+import '@fontsource/cabin/400.css';
 import styles from './perProductWidgets.module.css';
 
 export interface Widget {

@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { logoSvg } from '@components/ui/Svgs/Svgs';
 import styles from './productWidget.module.css';
+import '@fontsource/cabin/400.css';
+import '@fontsource/cabin/700.css';
 
 interface ProductWidgetProps {
 	action: string;
@@ -25,7 +27,7 @@ const ProductWidget: FC<ProductWidgetProps> = ({
 
 	return (
 		<>
-			{/* If isLinked and profileLink are true, render the anchor tag with the product widget, else render the product widget without the anchor tag. */}
+			{/* If isLinked and profileLink are true, render the anchor tag as widget container, else render the product widget with div container */}
 			{isLinked && profileLink ? (
 				<a
 					href={profileLink}

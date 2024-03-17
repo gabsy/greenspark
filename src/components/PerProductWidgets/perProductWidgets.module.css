@@ -9,8 +9,10 @@
 		0px 3.42222px 6.19259px rgba(0, 0, 0, 0.0196296),
 		0px 0.777778px 2.99074px rgba(0, 0, 0, 0.012037);
 	border-radius: 0.5rem;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
+	font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
 	gap: 1.5rem;
 	max-width: 810px;
 	padding: 2.25rem;
@@ -22,6 +24,10 @@
 		margin: 0;
 		padding-bottom: 0.5rem;
 		width: 100%;
+	}
+
+	& * {
+		box-sizing: border-box;
 	}
 }
 

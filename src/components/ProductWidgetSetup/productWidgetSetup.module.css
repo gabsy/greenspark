@@ -8,7 +8,12 @@
 	min-width: 220px;
 	width: 100%;
 
-	@media (min-width: 768px) {
+	@media (min-width: 40rem) {
+		width: calc((100% - 2.25rem) * 0.5);
+	}
+
+	/* breakpoint dependent on the desired standalone widget min-width */
+	@media (min-width: 852px) {
 		width: auto;
 	}
 }

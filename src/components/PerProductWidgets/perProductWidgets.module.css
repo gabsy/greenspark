@@ -12,7 +12,6 @@
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	font-family: 'Cabin', system-ui, Avenir, Helvetica, Arial, sans-serif;
 	gap: 1.5rem;
 	max-width: 810px;
 	padding: 2.25rem;
@@ -24,10 +23,10 @@
 		margin: 0;
 		padding-bottom: 0.5rem;
 		width: 100%;
-	}
 
-	& * {
-		box-sizing: border-box;
+		@media (max-width: 30rem) {
+			font-size: 1.5rem;
+		}
 	}
 }
 
@@ -37,7 +36,6 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 2.25rem;
-	justify-content: space-between;
 	padding: 0;
 	width: 100%;
 }

@@ -34,6 +34,7 @@ const ProductWidget: FC<ProductWidgetProps> = ({
 					className={`${styles.productWidget} ${colorClass}`}
 					target="_blank"
 					rel="nofollow noreferrer"
+					data-testid="product-widget"
 				>
 					{logoSvg()}
 					<h4 className={styles.content}>
@@ -43,7 +44,10 @@ const ProductWidget: FC<ProductWidgetProps> = ({
 					</h4>
 				</a>
 			) : (
-				<div className={`${styles.productWidget} ${colorClass}`}>
+				<div
+					className={`${styles.productWidget} ${colorClass}`}
+					data-testid="product-widget"
+				>
 					{logoSvg()}
 					<h4 className={styles.content}>
 						<span>This product {action}</span>

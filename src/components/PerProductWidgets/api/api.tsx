@@ -6,11 +6,11 @@ export const fetchData = async (
 	setActiveWidgetId: Dispatch<SetStateAction<number | null>>,
 	setError: Dispatch<SetStateAction<string | null>>,
 	setIsLoading: Dispatch<SetStateAction<boolean>>,
-	apiKey: string,
+	apiUrl: string,
 ) => {
 	try {
 		// Fetch data from the API
-		const response = await fetch(apiKey);
+		const response = await fetch(apiUrl);
 
 		// If the response is not ok, throw error.
 		if (!response.ok)

@@ -23,15 +23,15 @@ interface PerProductWidgetsProps {
 		setActiveWidgetId: Dispatch<SetStateAction<number | null>>,
 		setError: Dispatch<SetStateAction<string | null>>,
 		setIsLoading: Dispatch<SetStateAction<boolean>>,
-		apiKey: string,
+		apiUrl: string,
 	) => void;
-	apiKey: string;
+	apiUrl: string;
 }
 
 const PerProductWidgets: FC<PerProductWidgetsProps> = ({
 	title,
 	fetchData,
-	apiKey,
+	apiUrl,
 }) => {
 	const [activeWidgetId, setActiveWidgetId] = useState<number | null>(null);
 	const [error, setError] = useState<string | null>(null);
@@ -39,7 +39,7 @@ const PerProductWidgets: FC<PerProductWidgetsProps> = ({
 	const [data, setData] = useState<Array<Widget>>([]);
 
 	useEffect(() => {
-		fetchData(setData, setActiveWidgetId, setError, setIsLoading, apiKey);
+		fetchData(setData, setActiveWidgetId, setError, setIsLoading, apiUrl);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 

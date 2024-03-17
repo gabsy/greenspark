@@ -1,6 +1,5 @@
 .product-widget-setup {
 	align-items: flex-start;
-	color: var(--color-green);
 	display: flex;
 	flex-direction: column;
 	font-size: 0.875rem;

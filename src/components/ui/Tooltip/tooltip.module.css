@@ -27,8 +27,8 @@
 		z-index: 1;
 
 		& a {
+			color: var(--color-green);
 			font-weight: 700;
-			letter-spacing: -2%;
 		}
 
 		&.is-visible {

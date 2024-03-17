@@ -10,6 +10,7 @@
 		0px 0.777778px 2.99074px rgba(0, 0, 0, 0.012037);
 	border-radius: 0.5rem;
 	box-sizing: border-box;
+	color: var(--color-green);
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
@@ -19,6 +20,7 @@
 
 	& .title {
 		border-bottom: 1px solid var(--color-light-green);
+		color: var(--color-black);
 		font-size: 2rem;
 		margin: 0;
 		padding-bottom: 0.5rem;
@@ -26,6 +28,14 @@
 
 		@media (max-width: 30rem) {
 			font-size: 1.5rem;
+		}
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }

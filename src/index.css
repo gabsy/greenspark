@@ -2,16 +2,6 @@
 	box-sizing: border-box;
 }
 
-a {
-	font-weight: 500;
-	color: var(--color-green);
-	text-decoration: inherit;
-
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
 body {
 	margin: 0;
 	padding: 0;

@@ -6,10 +6,11 @@ export const fetchData = async (
 	setActiveWidgetId: Dispatch<SetStateAction<number | null>>,
 	setError: Dispatch<SetStateAction<string | null>>,
 	setIsLoading: Dispatch<SetStateAction<boolean>>,
+	apiKey: string,
 ) => {
 	try {
 		// Fetch data from the API
-		const response = await fetch(import.meta.env.VITE_GS_API_URL);
+		const response = await fetch(apiKey);
 
 		// If the response is not ok, throw error.
 		if (!response.ok)

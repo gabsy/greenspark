@@ -26,5 +26,6 @@ export const Default: Story = {
 	args: {
 		title: 'Per Product Widgets',
 		fetchData,
+		apiKey: import.meta.env.VITE_GS_API_URL,
 	},
 };

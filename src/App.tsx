@@ -6,6 +6,7 @@ function App() {
 		<div className="wrapper">
 			<PerProductWidgets
 				title="Per Product Widgets"
+				apiKey={import.meta.env.VITE_GS_API_URL}
 				fetchData={fetchData}
 			/>
 		</div>

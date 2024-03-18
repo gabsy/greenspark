@@ -54,6 +54,9 @@ const PerProductWidgets: FC<PerProductWidgetsProps> = ({
 		activeWidgetId === id ? setActiveWidgetId(null) : setActiveWidgetId(id);
 	};
 
+	// Sort data by widget id
+	data.sort((a, b) => a.id - b.id);
+
 	return (
 		<div className={styles.perProductWidgets}>
 			<h3 className={styles.title}>{title}</h3>

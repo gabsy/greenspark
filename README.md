@@ -1,5 +1,6 @@
 # Greenspark "Per Product Widgets" component
 
+**LE**: I also implemented the widgets settings update using a different mock api, through PATCH method. The updates error handling is not properly done on the user view, just through console for now.
 
 The implementation approach of this project is to encapsulate all functionality within a single, self-contained and reusable component. This component is responsible for fetching displaying widgets and handling all related settings internally through its child components. It display the widgets by iterating the ProductWidgetSetup component. This design choice promotes modularity and reusability, allowing the component to be easily integrated into different parts of an application without requiring external configuration, using API URL passed as a prop, eventually stored as an environment variable.
 

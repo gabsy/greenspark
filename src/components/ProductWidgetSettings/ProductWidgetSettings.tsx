@@ -4,17 +4,16 @@ import Toggle from '@components/ui/Toggle/Toggle';
 import Tooltip from '@components/ui/Tooltip/Tooltip';
 import ColorPicker from '@components/ui/ColorPicker/ColorPicker';
 import { iconInfo } from '@components/ui/Svgs/Svgs';
+import { Color } from '@components/ui/ColorPicker/ColorPicker';
 import styles from './productWidgetSettings.module.css';
 
 interface ProductWidgetSettingsProps {
 	isLinked: boolean;
-	color: string;
+	color: Color;
 	active: boolean;
 	id: number;
 	handleLinkedChange: (isChecked: boolean) => void;
-	handleColorChange: (
-		color: 'white' | 'black' | 'blue' | 'green' | 'beige',
-	) => void;
+	handleColorChange: (color: Color) => void;
 	onActiveChange: (id: number) => void;
 }
 
@@ -54,6 +53,7 @@ const ProductWidgetSettings: FC<ProductWidgetSettingsProps> = ({
 				<ColorPicker
 					color={color}
 					onChangeFunction={handleColorChange}
+					isActive={active}
 				/>
 			</div>
 

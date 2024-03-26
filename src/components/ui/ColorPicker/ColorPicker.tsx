@@ -2,40 +2,34 @@ import { FC, useState } from 'react';
 import styles from './colorPicker.module.css';
 
 interface ColorPickerProps {
-	color: string;
-	onChangeFunction: (
-		color: 'white' | 'black' | 'blue' | 'green' | 'beige',
-	) => void;
+	color: Color;
+	onChangeFunction: (color: Color) => void;
+	isActive: boolean;
 }
 
-const ColorPicker: FC<ColorPickerProps> = ({ color, onChangeFunction }) => {
+const COLORS = ['blue', 'green', 'beige', 'white', 'black'] as const;
+export type Color = (typeof COLORS)[number];
+
+const ColorPicker: FC<ColorPickerProps> = ({
+	color,
+	onChangeFunction,
+	isActive,
+}) => {
 	const [selectedColor, setSelectedColor] = useState<string>(color);
 
-	const colors = ['blue', 'green', 'beige', 'white', 'black'];
-
-	const handleColorChange = (
-		newColor: 'white' | 'black' | 'blue' | 'green' | 'beige',
-	) => {
+	const handleColorChange = (newColor: Color) => {
 		setSelectedColor(newColor);
 		onChangeFunction(newColor);
 	};
 
 	return (
 		<div className={styles.gsColorPicker}>
-			{colors.map((color, index: number) => (
+			{COLORS.map((color, index: number) => (
 				<button
 					key={index}
 					style={{ backgroundColor: `var(--color-${color})` }}
-					onClick={() =>
-						handleColorChange(
-							color as
-								| 'white'
-								| 'black'
-								| 'blue'
-								| 'green'
-								| 'beige',
-						)
-					}
+					onClick={() => handleColorChange(color)}
+					disabled={isActive ? false : true}
 					className={selectedColor === color ? styles.selected : ''}
 				></button>
 			))}
